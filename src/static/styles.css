@@ -30,14 +30,15 @@ header h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
   justify-content: center;
 }
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: 2fr 1fr;
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -48,6 +49,7 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  margin: 0 auto 20px auto;
 }
 
 section h3 {
@@ -110,21 +112,24 @@ section h3 {
   margin-right: 8px;
 }
 
-.delete-btn {
-  background: none;
+/* Register button styles */
+.register-btn {
+  background-color: #43a047;
+  color: white;
   border: none;
-  color: #c62828;
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  padding: 2px 5px;
-  transition: all 0.2s;
-  border-radius: 3px;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+  display: block;
+  width: 100%;
 }
 
-.delete-btn:hover {
-  background-color: #ffebee;
+.register-btn:hover {
+  background-color: #388e3c;
 }
-
 .participants-section p {
   color: #777;
   font-style: italic;
